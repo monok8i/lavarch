@@ -1,0 +1,1 @@
+/home/monok8i/.config/hyprpaper/update-wallpaper.sh
