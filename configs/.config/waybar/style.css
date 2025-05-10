@@ -1,29 +1,35 @@
 @import "theme.css";
 
 * {
+  font-size: 15;
   padding: 0;
   margin: 0;
 }
 
 #waybar {
   min-height: 0px;
-  background: @base;
+  background-color: @base-opacity;
   border: solid @lavender 2px;
   border-radius: 10px;
-  margin: 8px 50px;
-  padding: 0 10px;
   color: @text;
   font-family: "0xProto Nerd Font";
-  font-size: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#workspaces button,
+#clock,
+#cpu,
+#memory,
+#network,
+#custom-icon,
+#battery {
+  margin: 8px 0;
+  padding: 0px 8px;
 }
 
 #workspaces button {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  padding: 0 8px;
   color: @subtext0;
+  font-weight: bold;
+  margin-left: 5px;
   border-radius: 8px;
 }
 
@@ -34,11 +40,7 @@
 
 #clock {
   color: @lavender;
-  font-size: 18px;
-}
-
-#cpu, #memory, #network, #battery #custom-icon {
-  padding: 0 8px;
+  font-size: 17px;
 }
 
 #cpu:hover, #memory:hover, #network:hover, #battery:hover, #custom-icon:hover, #clock:hover {
@@ -48,7 +50,6 @@
 
 #custom-icon {
   color: @lavender;
-  font-size: 15px;
   margin-left: 10px;
 }
 
