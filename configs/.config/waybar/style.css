@@ -1,37 +1,92 @@
+@import "theme.css";
+
+#waybar {
+  background: @base;
+  /* border: solid @sky 1px; */
+  /* border-radius: 10px; */
+  margin: 8px 50px;
+  padding: 0 10px;
+  color: @text;
+  font-family: "0xProto Nerd Font";
+  font-size: 16px;
+  min-height: 36px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#workspaces button {
+  margin-left: 5px;
+  padding: 0 8px;
+  color: @subtext0;
+  border-radius: 8px;
+}
+
+#workspaces button.active {
+  background-color: @surface1;
+  color: @sky;
+}
+
+#clock {
+  font-size: 18px;
+  color: @lavender;
+}
+
+#cpu, #memory, #network, #battery #custom-icon {
+  padding: 0 10px;
+}
+
+#cpu:hover, #memory:hover, #network:hover, #battery:hover, #custom-icon:hover, #clock:hover {
+  background: @surface0;
+  border-radius: 10px;
+}
+
+#custom-icon {
+  margin-left: 10px;
+  font-size: 20px;
+  color: @lavender;
+}
+
+#battery {
+  margin-right: 10px;
+}
+
+#cpu.active {
+  background-color: @base;
+}
+/*
+
 * {
-    font-family: 'JetBrainsMono Nerd Font', monospace;
-    font-size: 14px;
-    padding: 0 5px;
-  }
+  font-family: "0xProto Nerd Font";
+  font-size: 14px;
+  min-height: 0;
+}
 
-  window#waybar {
-    background: #1e1e2e;
-    color: #cdd6f4;
-    border-radius: 10px;
-    border: 1px solid #313244;
-  }
+#waybar {
+  background: transparent;
+  background-color: @surface0;
+  border-radius: 10px;
+}
 
-  #workspaces button {
-    background: transparent;
-    border-radius: 5px;
-    margin: 2px;
-    padding: 0 10px;
-    color: #cdd6f4;
-  }
+#workspaces {
+  border-radius: 7px;
+  margin: 5px;
+  background-color: @surface1;
+  margin-left: 1rem;
+}
 
-  #workspaces button.active {
-    background: #b4befe;
-    color: #1e1e2e;
-  }
+#workspaces button {
+	color: @lavender;
+	border-radius: 1rem;
+	padding: 0.4rem;
+}
 
-  #clock, #cpu, #memory, #network, #pulseaudio, #battery {
-    margin: 0 5px;
-  }
+#workspaces button.active {
+color: @sky;
+border-radius: 1rem;
+}
 
-  #clock {
-    color: #fab387;
-  }
+#workspaces button:hover {
+color: @sapphire;
+border-radius: 1rem;
+}
 
-  #battery.charging {
-    color: #a6e3a1;
-  }
+*/
