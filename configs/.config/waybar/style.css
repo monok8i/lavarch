@@ -1,19 +1,26 @@
 @import "theme.css";
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 #waybar {
+  min-height: 0px;
   background: @base;
-  /* border: solid @sky 1px; */
-  /* border-radius: 10px; */
+  border: solid @lavender 2px;
+  border-radius: 10px;
   margin: 8px 50px;
   padding: 0 10px;
   color: @text;
   font-family: "0xProto Nerd Font";
   font-size: 16px;
-  min-height: 36px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #workspaces button {
+  margin-top: 5px;
+  margin-bottom: 5px;
   margin-left: 5px;
   padding: 0 8px;
   color: @subtext0;
@@ -21,17 +28,17 @@
 }
 
 #workspaces button.active {
-  background-color: @surface1;
   color: @sky;
+  background-color: @surface1;
 }
 
 #clock {
-  font-size: 18px;
   color: @lavender;
+  font-size: 18px;
 }
 
 #cpu, #memory, #network, #battery #custom-icon {
-  padding: 0 10px;
+  padding: 0 8px;
 }
 
 #cpu:hover, #memory:hover, #network:hover, #battery:hover, #custom-icon:hover, #clock:hover {
@@ -40,9 +47,9 @@
 }
 
 #custom-icon {
-  margin-left: 10px;
-  font-size: 20px;
   color: @lavender;
+  font-size: 15px;
+  margin-left: 10px;
 }
 
 #battery {

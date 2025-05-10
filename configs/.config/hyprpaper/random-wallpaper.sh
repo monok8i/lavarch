@@ -1,21 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Шлях до папки з шпалерами
-WALL_DIR="$HOME/.wallpapers"
+WALLPAPER_DIR="$HOME/.wallpapers"
+CURRENT_WALL=$(hyprctl hyprpaper listloaded)
 
-# Випадкова картинка
-RANDOM_WALL=$(find "$WALL_DIR" -type f | shuf -n 1)
+# Get a random wallpaper that is not the current one
+WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
 
-# Монітор — зміни на свій, якщо в тебе не eDP-1 (перевір через `hyprctl monitors`)
-MONITOR="eDP-1"
-
-# Генеруємо новий конфіг
-cat > "$HOME/.config/hypr/hyprpaper.conf" <<EOF
-preload = $RANDOM_WALL
-wallpaper = $MONITOR, $RANDOM_WALL
-EOF
-
-# Запускаємо hyprpaper
-killall hyprpaper 2>/dev/null
-hyprpaper &
-
+# Apply the selected wallpaper
+hyprctl hyprpaper unload all
+hyprctl hyprpaper preload "$WALLPAPER"
+hyprctl hyprpaper wallpaper "eDP-1, $WALLPAPER"
