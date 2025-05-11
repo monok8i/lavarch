@@ -49,6 +49,7 @@
 }
 
 #custom-icon {
+  font-size: 20px;
   color: @lavender;
   margin-left: 10px;
 }
