@@ -64,7 +64,7 @@ listview {
     border: 0px;
     padding: 4px 0px 13px;
     margin: 0px 0px 0px 20px;
-    columns: 2;
+    columns: 1;
     background-color: @base;
     lines: 7;
     border-radius: 0px;
@@ -89,4 +89,11 @@ element selected {
     background-color: @surface1;
     text-color: @sky;
     font: @font;
+}
+
+scrollbar {
+    handle-width: 0px;
+    width: 0px;
+    background-color: transparent;
+    handle-color: transparent;
 }
