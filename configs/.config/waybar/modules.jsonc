@@ -3,33 +3,77 @@
         "format": "󰣇 ",
         "on-click": "rofi -show drun",
         "on-click-right": "killall rofi",
+        "tooltip": false
+    },
+
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰂎", "󰁻", "󰁽", "󰁿", "󰂁", "󰁹"],
+        "max-length": 25,
         "tooltip": true
     },
 
+    "backlight": {
+        "format": "{icon} <b>{percent}%</b>",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "tooltip": false
+    },
+
+    "hyprland/language": {
+        "format": " {}"
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": " {}%",
+        "max-length": 10
+    },
+
+    "memory": {
+        "interval": 10,
+        "format": " {}%",
+        "max-length": 10
+    },
+
+    "network": {
+        "interval": 10,
+        "format-wifi": " {essid}",
+        "format-ethernet": "  Wired",
+        "fomat-disconnected": "󱚵 Disconnected",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected"
+      },
+
     "clock": {
-        "format": "{:%H:%M}",
-        "format-alt": "{:%A, %B %d, %Y (%R)}"
-        // "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        // "calendar": {
-        //     "mode"          : "year",
-        //     "mode-mon-col"  : 3,
-        //     "weeks-pos"     : "right",
-        //     "on-scroll"     : 1,
-        //     "on-click-right": "mode",
-        //     "format": {
-        //         "months":     "<span color='#ffead3'><b>{}</b></span>",
-        //         "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-        //         "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-        //         "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-        //         "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-        //     }
-        // },
-        // "actions": {
-        //     "on-click-right": "mode",
-        //     "on-click-forward": "tz_up",
-        //     "on-click-backward": "tz_down",
-        //     "on-scroll-up": "shift_up",
-        //     "on-scroll-down": "shift_down"
-        // }
+	"format": "󰥔 {:%H:%M 󰃭 %d.%m}",
+        "format-alt": "{:%A, %B %d, %Y (%R)}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode"          : "month",
+            "mode-mon-col"  : 5,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "on-click-right": "mode",
+            "format": {
+                "months":     "<span color='#b4befe'><b>{}</b></span>",       // lavender
+                "days":       "<span color='#cdd6f4'><b>{}</b></span>",       // text
+                "weeks":      "<span color='#a6e3a1'><b>W{}</b></span>",      // green
+                "weekdays":   "<span color='#cba6f7'><b>{}</b></span>",       // mauve
+                "today":      "<span color='#74c7ec'><b><u>{}</u></b></span>" // sapphire
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
     }
 }

@@ -1,5 +1,6 @@
 @import "theme.css";
 
+/* Глобальні стилі */
 * {
   font-size: 15;
   padding: 0;
@@ -9,93 +10,92 @@
 #waybar {
   min-height: 0px;
   background-color: @base-opacity;
-  border: solid @lavender 2px;
-  border-radius: 10px;
+  border: 2px solid @lavender;
   color: @text;
   font-family: "0xProto Nerd Font";
 }
 
+/* Загальні стилі для елементів */
+#window,
+#language,
 #workspaces button,
 #clock,
 #cpu,
 #memory,
 #network,
 #custom-icon,
-#battery {
+#battery,
+#backlight {
   margin: 8px 0;
-  padding: 0px 8px;
+  padding: 0 8px;
 }
 
+/* Специфіка для custom icon */
+#custom-icon {
+  font-size: 20px;
+  color: @lavender;
+  margin: 5px 0 5px 10px;
+}
+
+/* Workspaces */
 #workspaces button {
   color: @subtext0;
   font-weight: bold;
-  margin-left: 5px;
-  border-radius: 8px;
+  margin-left: 2px;
 }
 
 #workspaces button.active {
   color: @sky;
   background-color: @surface1;
+  border-radius: 0;
 }
 
+/* Battery */
+#battery {
+  margin-right: 10px;
+}
+
+/* CPU активний */
+#cpu.active {
+  background-color: @base;
+}
+
+/* Clock & Window */
+#window,
 #clock {
   color: @lavender;
   font-size: 17px;
 }
 
-#cpu:hover, #memory:hover, #network:hover, #battery:hover, #custom-icon:hover, #clock:hover {
+#window:active {
   background: @surface0;
-  border-radius: 10px;
 }
 
-#custom-icon {
-  font-size: 20px;
-  color: @lavender;
+/* Backlight */
+#backlight {
   margin-left: 10px;
 }
 
-#battery {
-  margin-right: 10px;
+/* Hover-ефекти */
+#workspaces button:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#battery:hover,
+#custom-icon:hover,
+#clock:hover,
+#window:hover,
+#language:hover,
+#backlight:hover {
+  background: @surface0;
+  border-radius: 0;
 }
 
-#cpu.active {
-  background-color: @base;
-}
-/*
-
-* {
-  font-family: "0xProto Nerd Font";
+tooltip {
+  background-color: @base-opacity; /* Catppuccin Mocha: base */
+  color: @text;           /* Catppuccin Mocha: text */
+  border: 2px solid @lavender;
   font-size: 14px;
-  min-height: 0;
+  padding: 10px;
+  border-radius: 0px;
 }
-
-#waybar {
-  background: transparent;
-  background-color: @surface0;
-  border-radius: 10px;
-}
-
-#workspaces {
-  border-radius: 7px;
-  margin: 5px;
-  background-color: @surface1;
-  margin-left: 1rem;
-}
-
-#workspaces button {
-	color: @lavender;
-	border-radius: 1rem;
-	padding: 0.4rem;
-}
-
-#workspaces button.active {
-color: @sky;
-border-radius: 1rem;
-}
-
-#workspaces button:hover {
-color: @sapphire;
-border-radius: 1rem;
-}
-
-*/

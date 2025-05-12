@@ -1,12 +1,12 @@
 {
-    "layer": "top",
+	"layer": "top",
     "position": "top",
 	"margin-top": 5,
 	"margin-left": 15,
 	"margin-right": 15,
-    "modules-left": ["custom/icon", "hyprland/workspaces"],
+    "modules-left": ["custom/icon", "hyprland/workspaces", "cpu", "memory"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory", "network", "battery"],
+    "modules-right": ["backlight", "hyprland/language", "network", "battery"],
 
 	"include": [
 		"~/.config/waybar/modules.jsonc"
@@ -107,16 +107,6 @@
 //     "hyprland/language": {
 //         "format": "  {1}",
 //         "tooltip": false,
-//     },
-//     "cpu": {
-//         "interval": 15,
-//         "format": "  {}%",
-//         "max-length": 10
-//     },
-//     "memory": {
-//         "interval": 30,
-//         "format": "  {}%",
-//         "max-length": 10
 //     },
 //     "custom/launcher":{
 //         "format": " ",
