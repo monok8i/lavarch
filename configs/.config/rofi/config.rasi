@@ -1,0 +1,13 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    fixed-num-lines: true;
+    lines: 7;
+}
+
+@theme "~/.config/rofi/menu.rasi"

@@ -1,0 +1,92 @@
+* {
+    width: 600;
+    font: "0xProto Nerd Font 12";
+}
+@import "./colors.rasi"
+
+element-text, element-icon, mode-switcher {
+    background-color: inherit;
+    text-color: inherit;
+    border-radius: 20px;
+    font: @font;
+    highlight: none;
+}
+
+window {
+    border: 2px;
+    border-color: @lavender;
+    background-color: @background-opacity;
+    padding: 0px 20px 0px 0px;
+    font: @font;
+}
+
+mainbox {
+    background-color: @base;
+    font: @font;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @base;
+    border-radius: 5px;
+    padding: 2px;
+    font: @font;
+}
+
+prompt {
+    enabled: false;
+    background-color: @selected;
+    padding: 5px;
+    text-color: @text;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0px;
+    font: @font;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    font: @font;
+}
+
+entry {
+    padding: 0px 10px 8px 10px;
+    margin: 15px 0px 0px 15px;
+    text-color: @text;
+    background-color: @base;
+    line-height: 30px;
+    font: @font;
+    cursor-width: 11;
+}
+
+listview {
+    border: 0px;
+    padding: 4px 0px 13px;
+    margin: 0px 0px 0px 20px;
+    columns: 2;
+    background-color: @base;
+    lines: 7;
+    border-radius: 0px;
+    font: @font;
+}
+
+element {
+    padding: 5px;
+    border-radius: 0px;
+    font: @font;
+    background-color: @base;
+    text-color: @text;
+}
+
+element-icon {
+    enabled: false;
+    size: 25px;
+    font: @font;
+}
+
+element selected {
+    background-color: @surface1;
+    text-color: @sky;
+    font: @font;
+}
