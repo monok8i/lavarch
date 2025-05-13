@@ -8,5 +8,3 @@ configuration {
     fixed-num-lines: true;
     lines: 7;
 }
-
-@theme "~/.config/rofi/menu.rasi"

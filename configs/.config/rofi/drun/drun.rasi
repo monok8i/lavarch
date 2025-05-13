@@ -2,7 +2,7 @@
     width: 600;
     font: "0xProto Nerd Font 12";
 }
-@import "./colors.rasi"
+@import "../colors.rasi"
 
 element-text, element-icon, mode-switcher {
     background-color: inherit;
@@ -64,7 +64,7 @@ listview {
     border: 0px;
     padding: 4px 0px 13px;
     margin: 0px 0px 0px 20px;
-    columns: 1;
+    columns: 2;
     background-color: @base;
     lines: 7;
     border-radius: 0px;

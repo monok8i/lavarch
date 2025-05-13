@@ -1,4 +1,6 @@
-
+/**
+ * Font configuration
+ */
 * {
-    font: "0xProto Nerd Font 8";
+    font: "0xProto Nerd Font 12";
 }
