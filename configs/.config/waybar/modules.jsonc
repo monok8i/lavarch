@@ -1,11 +1,17 @@
 {
     "custom/icon":{
         "format": "󰣇 ",
-        "on-click": "rofi -show drun",
+        "on-click": "sh ~/.config/rofi/drun/drun.sh",
         "on-click-right": "killall rofi",
         "tooltip": false
     },
 
+    "custom/power":{
+        "format": "⏻ ",
+        "tooltip": false,
+        "on-click": "sh ~/.config/rofi/powermenu/powermenu.sh",
+        "on-click-right": "killall rofi"
+    },
 
     "battery": {
         "states": {

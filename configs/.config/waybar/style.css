@@ -25,15 +25,17 @@
 #network,
 #custom-icon,
 #battery,
+#custom-power,
 #backlight {
   margin: 8px 0;
   padding: 0 8px;
 }
 
-/* Специфіка для custom icon */
+/* Custom icon (left)*/
 #custom-icon {
   font-size: 20px;
   color: @lavender;
+  padding-right: 5px;
   margin: 5px 0 5px 10px;
 }
 
@@ -50,14 +52,10 @@
   border-radius: 0;
 }
 
-/* Battery */
-#battery {
+/* Power */
+#custom-power {
+  padding-right: 3px;
   margin-right: 10px;
-}
-
-/* CPU активний */
-#cpu.active {
-  background-color: @base;
 }
 
 /* Clock & Window */
@@ -77,6 +75,7 @@
 }
 
 /* Hover-ефекти */
+#custom-power:hover,
 #workspaces button:hover,
 #cpu:hover,
 #memory:hover,
