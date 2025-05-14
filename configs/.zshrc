@@ -89,6 +89,8 @@ source $ZSH/oh-my-zsh.sh
 
 alias ll="ls -la"
 alias ls="eza --icons=always --color=always --all --no-filesize"
+alias cat="bat"
+alias img="kitty +kitten icat"
 
 # ======== FZF
 
