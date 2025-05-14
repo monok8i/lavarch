@@ -86,8 +86,7 @@ element-icon {
 }
 
 element selected {
-    background-color: @surface1;
-    text-color: @sky;
+    text-color: @green;
     font: @font;
 }
 
