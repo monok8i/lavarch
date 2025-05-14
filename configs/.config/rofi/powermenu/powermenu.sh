@@ -17,4 +17,22 @@ suspend='  '
 logout='  '
 
 
-echo -e "$poweroff\n$reboot\n$lock\n$suspend\n$logout" | rofi -dmenu -theme ~/.config/rofi/powermenu/powermenu.rasi
+chosen="$(echo -e "$poweroff\n$reboot\n$lock\n$suspend\n$logout" | rofi -dmenu -theme ~/.config/rofi/powermenu/powermenu.rasi)"
+
+case "$chosen" in
+    "$poweroff")
+        systemctl poweroff
+        ;;
+    "$reboot")
+        systemctl reboot
+        ;;
+    "$lock")
+        hyprlock
+        ;;
+    "$suspend")
+        systemctl suspend
+        ;;
+    "$logout")
+        hyprctl dispatch exit
+        ;;
+esac
