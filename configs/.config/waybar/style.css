@@ -34,7 +34,7 @@
 /* Custom icon (left)*/
 #custom-icon {
   font-size: 20px;
-  color: @lavender;
+  color: @green;
   padding-right: 5px;
   margin: 5px 0 5px 10px;
 }
@@ -52,16 +52,37 @@
   border-radius: 0;
 }
 
+#cpu {
+  color: @peach;
+}
+
+#memory {
+  color: @peach;
+}
+
+#battery {
+  color: @red;
+}
+
+#language {
+  color: @teal;
+}
+
+#network {
+  color: @teal;
+}
+
 /* Power */
 #custom-power {
+  color: @green;
   padding-right: 3px;
   margin-right: 10px;
 }
 
 /* Clock & Window */
-#window,
+
 #clock {
-  color: @lavender;
+  color: @green;
   font-size: 17px;
 }
 
@@ -71,6 +92,7 @@
 
 /* Backlight */
 #backlight {
+  color: @rosewater;
   margin-left: 10px;
 }
 
