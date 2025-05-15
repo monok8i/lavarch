@@ -72,6 +72,10 @@
   color: @teal;
 }
 
+#network.disconnected {
+  color: @text;
+}
+
 /* Power */
 #custom-power {
   color: @green;
