@@ -51,7 +51,7 @@
         "format-wifi": "  {essid}",
         "format-ethernet": "  Wired",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-ethernet": "{ifname}  ",
         "tooltip-format-disconnected": "Disconnected"
       },
 
