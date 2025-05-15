@@ -48,9 +48,8 @@
 
     "network": {
         "interval": 10,
-        "format-wifi": " {essid}",
+        "format-wifi": "  {essid}",
         "format-ethernet": "  Wired",
-        "fomat-disconnected": "󱚵 Disconnected",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected"
