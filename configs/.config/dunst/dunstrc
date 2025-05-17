@@ -1,0 +1,73 @@
+[global]
+monitor = 0
+follow = mouse
+shrink = no
+font = 0xProto Nerd Font 12
+
+# geometry and position
+width = 300
+height = 125
+offset = (15, 17)
+origin = bottom-right
+padding = 10
+horizontal_padding = 10
+
+# height between notifications
+separator_height = 5
+
+# notification look
+frame_width = 2
+frame_color = "#b4befe"
+corner_radius = 0
+separator_color = frame
+markup = full
+format = "<b><i><span foreground='#a6e3a1'>%s</span></i></b>\n%b"
+alignment = left
+icon_position = left
+
+
+# other
+sort = false
+# show_indicators = true
+# ==> idle_threshold
+# dmenu = "rofi -dmenu -p 'dunst:'"
+stack_duplicates = true
+show_age_threshold = 60
+word_wrap = yes
+ignore_newline = no
+hide_duplicate_count = no
+max_icon_size = 60
+sticky_history = no
+history_length = 3
+enable_recursive_icon_lookup = true
+
+# actions
+mouse_left_click = close_current
+mouse_middle_click = context, do_action
+mouse_right_click = close_all
+
+[ignore_flameshot_warning]
+body = "grim's screenshot component is implemented based on wlroots, it may not be used in GNOME or similar desktop environments"
+format = ""
+
+[urgency_low]
+background = "#181825"
+foreground = "#cdd6f4"
+frame_color = "#cba6f7"
+timeout = 5
+
+[urgency_normal]
+background = "#181825"
+foreground = "#cdd6f4"
+frame_color = "#b4befe"
+timeout = 5
+
+[urgency_critical]
+background = "#181825"
+foreground = "#cdd6f4"
+frame_color = "#eba0ac"
+timeout = 10
+
+
+[fullscreen]
+fullscreen = false
