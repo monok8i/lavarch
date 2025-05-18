@@ -19,7 +19,32 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-icons": ["󰂎", "󰁻", "󰁽", "󰁿", "󰂁", "󰁹"],
+        "format-icons": {
+            "charging": [
+                "󰢜",
+                "󰂆",
+                "󰂇",
+                "󰂈",
+                "󰢝",
+                "󰂉",
+                "󰢞",
+                "󰂊",
+                "󰂋",
+                "󰂅"
+            ],
+            "default": [
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ]
+        },
         "max-length": 25,
         "tooltip": true
     },
@@ -58,7 +83,6 @@
     "clock": {
         "format": "󰥔 {:%H:%M 󰃭 %d.%m}",
             "format-alt": "{:%A, %B %d, %Y (%R)}",
-            "tooltip-format": "<tt><small>{calendar}</small></tt>",
             "calendar": {
                 "mode"          : "month",
                 "mode-mon-col"  : 5,
