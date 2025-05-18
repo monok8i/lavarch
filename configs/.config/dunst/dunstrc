@@ -40,6 +40,7 @@ max_icon_size = 60
 sticky_history = no
 history_length = 3
 enable_recursive_icon_lookup = true
+progress_bar = true
 
 # actions
 mouse_left_click = close_current
@@ -68,6 +69,13 @@ foreground = "#cdd6f4"
 frame_color = "#eba0ac"
 timeout = 10
 
-
 [fullscreen]
 fullscreen = false
+
+[rule_kb_brightness]
+appname = "kb-brightness"
+format = "<span foreground='#a6e3a1'>%s</span>\n%b"
+background = "#181825"
+foreground = "#cdd6f4"
+frame_color = "#b4befe"
+timeout = 1
