@@ -142,4 +142,4 @@ export BAT_THEME="Catppuccin Mocha"
 
 # ======== EXEC
 
-fastfetch --kitty-icat ~/.config/fastfetch/logo/arch.png --config ~/.config/fastfetch/config.jsonc
+fastfetch
