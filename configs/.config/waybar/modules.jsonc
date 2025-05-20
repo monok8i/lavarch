@@ -82,21 +82,21 @@
 
     "clock": {
         "format": "󰥔 {:%H:%M 󰃭 %d.%m}",
-            "format-alt": "{:%A, %B %d, %Y (%R)}",
-            "calendar": {
-                "mode"          : "month",
-                "mode-mon-col"  : 5,
-                "weeks-pos"     : "right",
-                "on-scroll"     : 1,
-                "on-click-right": "mode",
-                "format": {
-                    "months":     "<span color='#b4befe'><b>{}</b></span>",       // lavender
-                    "days":       "<span color='#cdd6f4'><b>{}</b></span>",       // text
-                    "weeks":      "<span color='#a6e3a1'><b>W{}</b></span>",      // green
-                    "weekdays":   "<span color='#cba6f7'><b>{}</b></span>",       // mauve
-                    "today":      "<span color='#74c7ec'><b><u>{}</u></b></span>" // sapphire
-                }
-            },
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 5,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#b4befe'><b>{}</b></span>",       // lavender
+                "days": "<span color='#cdd6f4'><b>{}</b></span>",       // text
+                "weeks": "<span color='#a6e3a1'><b>W{}</b></span>",      // green
+                "weekdays": "<span color='#cba6f7'><b>{}</b></span>",       // mauve
+                "today": "<span color='#74c7ec'><b><u>{}</u></b></span>" // sapphire
+            }
+        },
         "actions": {
             "on-click-right": "mode",
             "on-click-forward": "tz_up",
