@@ -34,7 +34,7 @@ while true; do
         percent=$(( 100 * curr / max ))
 
 
-        dunstify -a "kb-brightness" -t 2000 -r 2593 -u normal -h int:value:"${percent}" "Brightness: $percent%"
+        dunstify -a "kb-brightness" -t 2000 -r 2593 -u normal -h int:value:"${percent}" "Keyboard brightness: $percent%"
     fi
     sleep 0.5
 done
