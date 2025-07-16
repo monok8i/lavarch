@@ -1,10 +1,13 @@
-configuration {
-    modi: "drun";
+configuration{
+    modi: ["drun", "window", "run"];
+    //icon-theme: "Papirus-Dark";
     show-icons: true;
     terminal: "kitty";
     drun-display-format: "{icon} {name}";
+    location: 1;
     disable-history: false;
-    hide-scrollbar: true;
-    fixed-num-lines: true;
-    lines: 7;
+    sidebar-mode: false;
+    display-drun: " ";
+    display-run: " Search:";
+    display-window: " Windows:";
 }
