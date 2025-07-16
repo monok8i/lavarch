@@ -1,0 +1,84 @@
+@import "./fonts.rasi"
+@import "./colors.rasi"
+
+// defines different aspects of the window
+window {
+    width: 500;
+    orientation: horizontal;
+    location: center;
+    anchor: center;
+    transparency: "screenshot";
+    border-color: @transparent;
+    border: 0px;
+    spacing: 0;
+    children: [ mainbox ];
+    font: @font;
+}
+
+mainbox {
+    spacing: 0;
+    children: [ inputbar, message, listview ];
+}
+
+inputbar {
+    background-color: @base;
+    padding: 11px;
+    border: 2px;
+    border-color: @lavender;
+}
+
+entry, prompt, case-indicator {
+    text-font: @font;
+    text-color: @text;
+    background-color: @base;
+}
+
+entry {
+    cursor: pointer;
+    cursor-width: 3px;
+}
+
+prompt {
+    margin: 0px 3px 0px 0px;
+    text-color: @text;
+    background-color: @base;
+}
+
+listview {
+    layout: vertical;
+    padding: 10px;
+    lines: 7;
+    columns: 1;
+    border: 0px 2px 2px 2px;
+    border-color: @lavender;
+    dynamic: false;
+    background-color: @base;
+}
+
+element {
+    padding: 3px;
+    text-color: @text;
+    background-color: @base;
+    font: @font;
+}
+
+element-icon {
+    enabled: false;
+    font: @font;
+}
+
+element selected.normal {
+    color: @green;
+    background-color: @base;
+}
+
+element normal active {
+    background-color: @base;
+    text-color: @green;
+}
+
+element-text, element-icon {
+    size: 25px;
+    background-color: @base;
+    text-color: inherit;
+}
