@@ -7,7 +7,7 @@ IFS=$'\n' read -d '' -r -a orig_lines <<< "$original"
 IFS=$'\n' read -d '' -r -a disp_lines <<< "$display"
 
 # Показуємо в rofi та отримуємо індекс
-selected_index=$(printf '%s\n' "${disp_lines[@]}" | rofi -dmenu -theme ~/.config/rofi/dmenu/dmenu.rasi -format i)
+selected_index=$(printf '%s\n' "${disp_lines[@]}" | rofi -dmenu -theme ~/.config/rofi/config.rasi -format i)
 
 if [ -n "$selected_index" ]; then
     echo "${orig_lines[$selected_index]}" | cliphist decode | wl-copy
