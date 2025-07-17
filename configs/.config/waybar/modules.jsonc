@@ -1,18 +1,41 @@
 {
-    "custom/icon":{
-        "format": "󰣇 ",
-        "on-click": "sh ~/.config/rofi/drun/drun.sh",
+    // left modules
+    "custom/icon": {
+        "format": "󰣇",
+        "on-click": "rofi -show drun -theme ~/.config/rofi/config.rasi",
         "on-click-right": "killall rofi",
         "tooltip": false
     },
-
-    "custom/power":{
-        "format": "⏻ ",
-        "tooltip": false,
-        "on-click": "sh ~/.config/rofi/powermenu/powermenu.sh",
-        "on-click-right": "killall rofi"
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*": 5 // 5 workspaces by default on every monitor
+        }
     },
-
+    // center modules
+    "temperature": {
+        "format": " <span color='#cdd6f4'>{temperatureC}°C</span>"
+    },
+    "memory": {
+        "interval": 10,
+        "format": " {used:0.2f}GiB",
+        "max-length": 10
+    },
+    "cpu": {
+        "interval": 1,
+        "format": " {usage:>2}% <span color='#cdd6f4'>{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}</span>",
+        "format-icons": [
+            "⣀",
+            "⣄",
+            "⣆",
+            "⣇",
+            "⣧",
+            "⣷",
+            "⣾",
+            "⣿"
+        ]
+    },
+    // right modules
     "battery": {
         "states": {
             "warning": 30,
@@ -33,55 +56,60 @@
                 "󰂅"
             ],
             "default": [
-                "󰁺",
-                "󰁻",
-                "󰁼",
-                "󰁽",
-                "󰁾",
-                "󰁿",
-                "󰂀",
-                "󰂁",
-                "󰂂",
-                "󰁹"
+                "<span color='#f38ba8'></span> ",
+                "<span color='#f38ba8'></span> ",
+                "<span color='#f9e2af'></span> ",
+                "<span color='#a6e3a1'></span> ",
+                "<span color='#a6e3a1'></span> "
             ]
         },
         "max-length": 25,
         "tooltip": true
     },
-
     "backlight": {
-        "format": "{icon} <b>{percent}%</b>",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "<span color='#f5e0dc'>󰃞</span>",
+            "<span color='#f5c2e7'>󰃟</span>",
+            "<span color='#cba6f7'>󰃠</span>"
+        ],
         "tooltip": false
     },
-
+    "wireplumber": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "scroll-step": 5
+    },
+    "wireplumber#sink": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "on-click": "helvum",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "scroll-step": 5
+    },
+    "wireplumber#source": {
+        "node-type": "Audio/Source",
+        "format": "{volume}% ",
+        "format-muted": "",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "scroll-step": 5
+    },
     "hyprland/language": {
-        "format": " {shortDescription}"
+        "format": "{shortDescription}"
     },
-
-    "cpu": {
-        "interval": 10,
-        "format": " {}%",
-        "max-length": 10
-    },
-
-    "memory": {
-        "interval": 10,
-        "format": " {}%",
-        "max-length": 10
-    },
-
-    "network": {
-        "interval": 10,
-        "format-wifi": " ",
-        "format-ethernet": " ",
-        "format-disconnected": " ",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{ifname}  "
-      },
-
     "clock": {
-        "format": "󰥔 {:%H:%M 󰃭 %d.%m}",
+        "format": " {:%I:%M %p  %d.%m}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "month",
@@ -90,10 +118,10 @@
             "on-scroll": 1,
             "on-click-right": "mode",
             "format": {
-                "months": "<span color='#b4befe'><b>{}</b></span>",       // lavender
-                "days": "<span color='#cdd6f4'><b>{}</b></span>",       // text
-                "weeks": "<span color='#a6e3a1'><b>W{}</b></span>",      // green
-                "weekdays": "<span color='#cba6f7'><b>{}</b></span>",       // mauve
+                "months": "<span color='#b4befe'><b>{}</b></span>", // lavender
+                "days": "<span color='#cdd6f4'><b>{}</b></span>", // text
+                "weeks": "<span color='#a6e3a1'><b>W{}</b></span>", // green
+                "weekdays": "<span color='#cba6f7'><b>{}</b></span>", // mauve
                 "today": "<span color='#74c7ec'><b><u>{}</u></b></span>" // sapphire
             }
         },
@@ -104,5 +132,34 @@
             "on-scroll-up": "shift_up",
             "on-scroll-down": "shift_down"
         }
+    },
+    "network": {
+        "interval": 10,
+        "format-wifi": " ",
+        "format-ethernet": " ",
+        "format-disconnected": " ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} "
+    },
+    "custom/power": {
+        "format": "⏻ ",
+        "tooltip": false,
+        "on-click": "sh ~/.config/rofi/powermenu/powermenu.sh",
+        "on-click-right": "killall rofi"
     }
 }
+// ramp-capacity-0 = " "
+// ramp-capacity-1 = " "
+// ramp-capacity-2 = " "
+// ramp-capacity-3 = " "
+// ramp-capacity-4 = " "
+// animation-charging-0 = " "
+// animation-charging-1 = " "
+// animation-charging-2 = " "
+// animation-charging-3 = " "
+// animation-charging-4 = " "
+// animation-discharging-0 = " "
+// animation-discharging-1 = " "
+// animation-discharging-2 = " "
+// animation-discharging-3 = " "
+// animation-discharging-4 = " "

@@ -1,32 +1,29 @@
 {
 	"layer": "top",
-    "position": "top",
-	"margin-top": 5,
+	"position": "top",
+	"margin-top": 3,
 	"margin-left": 15,
 	"margin-right": 15,
-    "modules-left": ["custom/icon", "hyprland/workspaces", "cpu", "memory"],
-    "modules-center": ["clock"],
-    "modules-right": ["backlight", "hyprland/language", "network", "battery", "custom/power"],
-
+	"modules-left": [
+		"custom/icon",
+		"hyprland/workspaces"
+	],
+	"modules-center": [
+		"temperature",
+		"cpu",
+		"memory"
+	],
+	"modules-right": [
+		"battery",
+		"backlight",
+		"wireplumber",
+		"hyprland/language",
+		"clock",
+		"network",
+		"custom/power",
+		"tray"
+	],
 	"include": [
 		"~/.config/waybar/modules.jsonc"
 	]
 }
-
-
-// {
-	// 	"pulseaudio": {
-	// 		"tooltip": false,
-	// 		"scroll-step": 5,
-	// 		"format": "{icon}  {volume}%",
-	// 		"format-muted": "muted",
-	// 		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
-	// 		"format-icons": {
-	// 			"default": ["", "", ""]
-	// 		}
-	// 	},
-	//     "tray": {
-	//         "icon-size": 18,
-	//         "spacing": 10
-	//     }
-// }

@@ -1,126 +1,169 @@
-@import "theme.css";
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@define-color text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color overlay2 #9399b2;
+@define-color overlay1 #7f849c;
+@define-color overlay0 #6c7086;
+@define-color surface2 #585b70;
+@define-color surface1 #45475a;
+@define-color surface0 #313244;
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color base-opacity rgba(30, 30, 46, 0.8);
 
-/* Глобальні стилі */
+/* Global styles */
 * {
-  font-size: 15;
+  font-size: 14;
+  font-weight: bold;
   padding: 0;
   margin: 0;
 }
 
 #waybar {
-  min-height: 0px;
-  background-color: @base-opacity;
-  border: 2px solid @lavender;
+  background-color: @base;
   color: @text;
-  font-family: "0xProto Nerd Font";
+  font-family: "JetBrainsMono Nerd Font";
 }
 
 /* Загальні стилі для елементів */
-#window,
-#language,
-#workspaces button,
-#clock,
+#custom-icon,
+#workspaces,
+#temperature,
 #cpu,
 #memory,
-#network,
-#custom-icon,
 #battery,
-#custom-power,
-#backlight {
-  margin: 8px 0;
-  padding: 0 8px;
+#backlight,
+#wireplumber,
+#language,
+#clock,
+#network,
+#custom-power {
+  margin: 5px 4px;
+  padding: 0px 5px;
 }
 
 /* Custom icon (left)*/
 #custom-icon {
-  font-size: 20px;
-  color: @green;
-  padding-right: 5px;
-  margin: 5px 0 5px 10px;
+  color: @blue;
+  font-size: 18px;
+  margin-left: 5px;
+  padding: 0px 11px 0px 8px;
 }
 
 /* Workspaces */
+#workspaces {
+    padding: 0px 8px;
+    background-color: @surface0;
+    border-radius: 12px;
+}
+
 #workspaces button {
-  color: @subtext0;
-  font-weight: bold;
-  margin-left: 2px;
+  color: @overlay0;
+  margin: 0px 2px;
+  padding: 0px 4px;
+  border-radius: 0px;
+  border-bottom: 2px solid transparent;
 }
 
 #workspaces button.active {
-  color: @sky;
-  background-color: @surface1;
-  border-radius: 0;
+  color: @rosewater;
+  border-bottom: 2px solid @surface2;
+}
+
+#temperature {
+  color: @sapphire;
+  margin-left: 4px;
 }
 
 #cpu {
-  color: @peach;
 }
 
 #memory {
   color: @peach;
 }
 
-#battery {
-  color: @red;
-}
-
 #language {
-  color: @teal;
+  color: #ffffff;
 }
 
 #network {
-  color: @teal;
+  color: @blue;
+}
+
+#network.wifi {
+  color: @sky;
+}
+
+#network.ethernet {
+  color: @blue;
 }
 
 #network.disconnected {
-  color: @text;
+  color: @maroon;
+}
+
+#network.disabled {
+  color: @surface0;
 }
 
 /* Power */
 #custom-power {
-  color: @green;
-  padding-right: 3px;
-  margin-right: 10px;
+  color: @red;
+  padding: 0px 3px 0px 7px;
 }
 
 /* Clock & Window */
-
 #clock {
-  color: @green;
-  font-size: 17px;
+  color: @overlay0;
+  background-color: @surface0;
+  padding: 0px 10px;
+  border-radius: 12px;
 }
 
-#window:active {
-  background: @surface0;
+#clock:hover {
+  background-color: @surface1;
 }
 
 /* Backlight */
 #backlight {
-  color: @rosewater;
-  margin-left: 10px;
 }
 
 /* Hover-ефекти */
-#custom-power:hover,
-#workspaces button:hover,
+#custom-icon:hover,
+#temperature:hover,
 #cpu:hover,
 #memory:hover,
-#network:hover,
 #battery:hover,
-#custom-icon:hover,
-#clock:hover,
-#window:hover,
+#backlight:hover,
+#wireplumber:hover,
 #language:hover,
-#backlight:hover {
+#network:hover,
+#custom-power:hover {
   background: @surface0;
   border-radius: 0;
 }
 
 tooltip {
-  background-color: @base-opacity; /* Catppuccin Mocha: base */
-  color: @text;           /* Catppuccin Mocha: text */
+  background-color: @base-opacity;
+  /* Catppuccin Mocha: base */
+  color: @text;
+  /* Catppuccin Mocha: text */
   border: 2px solid @lavender;
-  font-size: 14px;
+  font-size: 13px;
   padding: 10px;
   border-radius: 0px;
 }
