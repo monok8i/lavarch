@@ -10,14 +10,14 @@
         "format": "{id} {windows} ",
         "window-rewrite-default": "",
         "window-rewrite": {
-            "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
-            "class<firefox>": "", // Windows whose classes are "firefox"
-            "class<spotify>": "",
-            "class<discord>": "",
-            "class<vesktop>": "",
-            "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+            "title<.*youtube.*>": "<span color='#f38ba8'></span>", // Windows whose titles contain "youtube"
+            "class<firefox>": "<span color='#eba0ac'></span>", // Windows whose classes are "firefox"
+            "class<spotify>": "<span color='#a6e3a1'></span>",
+            "class<discord>": "<span color='#b4befe'></span>",
+            "class<vesktop>": "<span color='#b4befe'></span>",
+            "class<firefox> title<.*github.*>": "<span color='black'></span>", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
             "kitty": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
-            "code": "󰨞",
+            "code": "<span color='#89b4fa'>󰨞</span>",
             "title<.* - (.*) - VSCodium>": "codium $1" // captures part of the window title and formats it into output
         },
         "persistent-workspaces": {
@@ -31,7 +31,8 @@
     "memory": {
         "interval": 10,
         "format": " {used:0.2f}GiB",
-        "max-length": 10
+        "max-length": 10,
+        "tooltip": false
     },
     "cpu": {
         "interval": 1,
@@ -165,18 +166,3 @@
         "icons": {}
     }
 }
-// ramp-capacity-0 = " "
-// ramp-capacity-1 = " "
-// ramp-capacity-2 = " "
-// ramp-capacity-3 = " "
-// ramp-capacity-4 = " "
-// animation-charging-0 = " "
-// animation-charging-1 = " "
-// animation-charging-2 = " "
-// animation-charging-3 = " "
-// animation-charging-4 = " "
-// animation-discharging-0 = " "
-// animation-discharging-1 = " "
-// animation-discharging-2 = " "
-// animation-discharging-3 = " "
-// animation-discharging-4 = " "
