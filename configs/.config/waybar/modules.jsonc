@@ -15,6 +15,10 @@
             "class<spotify>": "<span color='#a6e3a1'></span>",
             "class<discord>": "<span color='#b4befe'></span>",
             "class<vesktop>": "<span color='#b4befe'></span>",
+            "class<ayugram-desktop>": "<span color='#74c7ec'></span>",
+            "class<ayugram>": "<span color='#74c7ec'></span>",
+            "class<telegram-desktop>": "<span color='#74c7ec'></span>",
+            "class<telegram>": "<span color='#74c7ec'></span>",
             "class<firefox> title<.*github.*>": "<span color='black'></span>", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
             "kitty": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
             "code": "<span color='#89b4fa'>󰨞</span>",
