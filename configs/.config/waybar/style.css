@@ -154,7 +154,7 @@
 #network:hover,
 #custom-power:hover {
   background: @surface0;
-  border-radius: 0;
+  border-radius: 12px;
 }
 
 tooltip {

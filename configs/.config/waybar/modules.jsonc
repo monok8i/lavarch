@@ -7,7 +7,19 @@
         "tooltip": false
     },
     "hyprland/workspaces": {
-        "format": "{name}",
+        "format": "{id} {windows} ",
+        "window-rewrite-default": "",
+        "window-rewrite": {
+            "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
+            "class<firefox>": "", // Windows whose classes are "firefox"
+            "class<spotify>": "",
+            "class<discord>": "",
+            "class<vesktop>": "",
+            "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+            "kitty": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
+            "code": "󰨞",
+            "title<.* - (.*) - VSCodium>": "codium $1" // captures part of the window title and formats it into output
+        },
         "persistent-workspaces": {
             "*": 5 // 5 workspaces by default on every monitor
         }
@@ -146,6 +158,11 @@
         "tooltip": false,
         "on-click": "sh ~/.config/rofi/powermenu/powermenu.sh",
         "on-click-right": "killall rofi"
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10,
+        "icons": {}
     }
 }
 // ramp-capacity-0 = " "
