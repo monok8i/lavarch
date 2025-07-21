@@ -116,7 +116,8 @@ _fzf_compgen_dir() {
 # ========= EZA (better ls)
 
 
-show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; elif file --mime-type {} | grep -q image/; then kitty +kitten icat --clear && kitty +kitten icat {}; else bat -n --color=always --line-range :500 {}; fi"
+
 
 export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
@@ -143,3 +144,5 @@ export BAT_THEME="Catppuccin Mocha"
 # ======== EXEC
 
 fastfetch
+
+export PATH=$PATH:/home/monok8i/.spicetify
