@@ -34,6 +34,8 @@
 }
 
 #waybar {
+  border: none;
+  margin-top: 2px;
   background-color: @base;
   color: @text;
   font-family: "JetBrainsMono Nerd Font";

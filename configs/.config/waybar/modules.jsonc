@@ -161,7 +161,7 @@
     "custom/power": {
         "format": "⏻ ",
         "tooltip": false,
-        "on-click": "sh ~/.config/rofi/powermenu/powermenu.sh",
+        "on-click": "sh ~/scripts/powermenu.sh",
         "on-click-right": "killall rofi"
     },
     "tray": {
