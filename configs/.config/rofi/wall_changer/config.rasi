@@ -1,0 +1,99 @@
+@import "../fonts.rasi"
+@import "../colors.rasi"
+
+* {
+    bg-color: transparent;
+    text-color: white;
+}
+
+window {
+    height: 400px;
+    width: 80%;
+    transparency: "real";
+    background-color: @background-opacity;
+    border: 2px solid;
+    border-color: @lavender;
+    padding: 0.5em 1em 2px 1em;
+    children: [listview, message, inputbar];
+}
+
+mainbox {
+    background-color: transparent;
+}
+
+inputbar {
+    background-color: transparent;
+    padding: 8px 12px;
+    margin: 0px 25em 0.5em 25em;
+    text-color: @text;
+    children: [ prompt, textbox-prompt-colon, entry ];
+}
+
+prompt {
+    enabled: false;
+}
+
+textbox-prompt-colon {
+    enabled: false;
+}
+
+entry {
+    placeholder: "Search wallpapers...";
+    placeholder-color: @subtext0;
+    background-color: transparent;
+    text-color: @text;
+    font: "0xProto Nerd Font Italic 12";
+}
+
+listview {
+    background-color: transparent;
+    rows: 1;
+    columns: 5;
+    spacing: 1em;
+    fixed-columns: true;
+}
+
+element {
+    background-color: @background-opacity;
+    orientation: vertical;
+    border-radius: 16px;
+    max-height: 300px;
+    max-width: 285px;
+    min-height: 0px;
+    min-width: 0px;
+    width: 285px;
+}
+
+element-icon {
+    size: 285px;
+    horizontal-align: 0.5;
+    border-radius: 16px 16px 0px 0px;
+}
+
+element selected.normal {
+    border-radius: 16px;
+    border: 2px solid;
+    border-color: @lavender;
+}
+
+element-text {
+    background-color: @background-opacity;
+    horizontal-align: 0.5;
+    text-color: @blue;
+    font: @font;
+    padding: 5px 10px 10px 10px;
+}
+
+element-text normal.active {
+    background-color: transparent;
+    text-color: @sapphire;
+}
+
+element-text selected.normal {
+    text-color: @green;
+}
+
+element selected.active {
+    background-color: transparent;
+    text-color: @sky;
+}
