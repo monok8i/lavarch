@@ -17,6 +17,7 @@
 		"battery",
 		"backlight",
 		"wireplumber",
+		"custom/notification",
 		"hyprland/language",
 		"clock",
 		"network",

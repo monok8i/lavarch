@@ -50,6 +50,7 @@
 #battery,
 #backlight,
 #wireplumber,
+#custom-notification,
 #language,
 #clock,
 #network,
@@ -148,6 +149,10 @@
 #backlight {
 }
 
+#custom-notification {
+  padding: 0px 3px 0px 7px;
+}
+
 /* Hover-ефекти */
 #custom-icon:hover,
 #temperature:hover,
@@ -156,6 +161,7 @@
 #battery:hover,
 #backlight:hover,
 #wireplumber:hover,
+#custom-notification:hover,
 #language:hover,
 #network:hover,
 #custom-power:hover,
