@@ -18,9 +18,9 @@ gap_size = 4
 
 # notification look
 frame_width = 2
-frame_color = "#b4befe"
-corner_radius = 0
-separator_color = frame
+frame_color = "#45475a"
+corner_radius = 10
+separator_color = "#45475a"
 markup = full
 format = "<b><span font_desc='0xProto Nerd Font 10' foreground='#a6e3a1'>%s</span></b>\n%b"
 alignment = center
@@ -55,18 +55,18 @@ format = ""
 [urgency_low]
 background = "#181825"
 foreground = "#cdd6f4"
-frame_color = "#cba6f7"
+frame_color = "#f9e2af"
 timeout = 5
 
 [urgency_normal]
 background = "#181825"
 foreground = "#cdd6f4"
-frame_color = "#b4befe"
+frame_color = "#45475a"
 timeout = 5
 
 [urgency_critical]
 background = "#181825"
-foreground = "#cdd6f4"
+foreground = "#45475a"
 frame_color = "#eba0ac"
 timeout = 10
 
