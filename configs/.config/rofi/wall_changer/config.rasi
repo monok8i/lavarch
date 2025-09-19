@@ -12,7 +12,8 @@ window {
     transparency: "real";
     background-color: @background-opacity;
     border: 2px solid;
-    border-color: @lavender;
+    border-radius: 10px;
+    border-color: @surface1;
     padding: 0.5em 1em 2px 1em;
     children: [listview, message, inputbar];
 }
@@ -73,7 +74,7 @@ element-icon {
 element selected.normal {
     border-radius: 16px;
     border: 2px solid;
-    border-color: @lavender;
+    border-color: @rosewater;
 }
 
 element-text {

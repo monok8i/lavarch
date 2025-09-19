@@ -37,7 +37,7 @@
 
     background:     @base;
     background-alt: @surface0;
-    background-opacity: rgba(30, 30, 46, 0.8);
+    background-opacity: rgba(30, 30, 46, 0.85);
     foreground:     @text;
     selected:       @lavender;
     active:         @mauve;

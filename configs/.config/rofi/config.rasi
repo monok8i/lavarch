@@ -14,36 +14,45 @@ configuration{
 @import "./fonts.rasi"
 @import "./colors.rasi"
 
+* {
+    bg-color: transparent;
+    text-color: white;
+}
+
 // defines different aspects of the window
 window {
-    width: 500;
+    background-color: @background-opacity;
+    width: 300;
     orientation: horizontal;
     location: center;
     anchor: center;
-    transparency: "screenshot";
+    transparency: "real";
     border-color: @transparent;
     border: 0px;
+    border-radius: 10px;
     spacing: 0;
     children: [ mainbox ];
     font: @font;
 }
 
 mainbox {
+    background-color: transparent;
     spacing: 0;
     children: [ inputbar, message, listview ];
 }
 
 inputbar {
-    background-color: @base;
+    background-color: transparent;
     padding: 11px;
     border: 2px;
-    border-color: @lavender;
+    border-radius: 10px 10px 0px 0px;
+    border-color: @surface1;
 }
 
 entry, prompt, case-indicator {
     text-font: @font;
     text-color: @text;
-    background-color: @base;
+    background-color: transparent;
 }
 
 entry {
@@ -54,39 +63,45 @@ entry {
 prompt {
     margin: 0px 3px 0px 0px;
     text-color: @text;
-    background-color: @base;
+    background-color: transparent;
 }
 
 listview {
     layout: vertical;
     padding: 10px;
     lines: 7;
-    columns: 2;
+    columns: 1;
     border: 0px 2px 2px 2px;
-    border-color: @lavender;
+    border-radius: 0px 0px 10px 10px;
+    border-color: @surface1;
     dynamic: false;
-    background-color: @base;
+    background-color: transparent;
 }
 
 element {
-    padding: 5px;
+    padding: 3px;
     text-color: @text;
-    background-color: @base;
+    background-color: transparent;
+    font: @font;
+}
+
+element-icon {
+    enabled: true;
     font: @font;
 }
 
 element selected.normal {
     color: @green;
-    background-color: @base;
+    background-color: transparent;
 }
 
 element normal active {
-    background-color: @base;
+    background-color: transparent;
     text-color: @green;
 }
 
 element-text, element-icon {
     size: 25px;
-    background-color: @base;
+    background-color: transparent;
     text-color: inherit;
 }
