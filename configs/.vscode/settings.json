@@ -1,0 +1,92 @@
+{
+    // Main
+    "editor.tabSize": 4,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.glyphMargin": false,
+    "editor.folding": true,
+    // UI
+    "editor.smoothScrolling": true,
+    "workbench.productIconTheme": "jetbrains-product-icon-theme",
+    "workbench.iconTheme": "jetbrains-file-icon-theme-dark",
+    "workbench.colorTheme": "Aura Dark",
+    "workbench.activityBar.location": "default",
+    "workbench.editor.showTabs": "single",
+    "workbench.statusBar.visible": true,
+    "workbench.startupEditor": "none",
+    "workbench.sideBar.location": "right",
+    "editor.minimap.enabled": false,
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.tree.indent": 16,
+    "workbench.tree.enableStickyScroll": false,
+    "explorer.fileNesting.enabled": false,
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.decorations.badges": true,
+    "window.title": "${rootName}",
+    "window.zoomLevel": 0.8,
+    "window.density.editorTabHeight": "default",
+    "window.commandCenter": false,
+    "window.confirmSaveUntitledWorkspace": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.editor.editorActionsLocation": "default",
+    "editor.scrollBeyondLastLine": true,
+    "editor.stickyScroll.enabled": false,
+    "editor.links": false,
+    "editor.lineNumbers": "relative",
+    "editor.showFoldingControls": "never",
+    "editor.guides.indentation": false,
+    "editor.renderLineHighlight": "none",
+    "editor.scrollbar.vertical": "hidden",
+    // Cursor
+    "editor.cursorBlinking": "expand",
+    "editor.cursorStyle": "line",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.multiCursorModifier": "alt",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyleInactive": "line",
+    // Files
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.autoSave": "onFocusChange",
+    // Exluded files in opened folder
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/__pycache__": true,
+        "**/.*_cache": true
+    },
+    "editor.fontFamily": "GeistMono Nerd Font Propo",
+    "editor.fontLigatures": true,
+    "editor.fontVariations": false,
+    "editor.fontWeight": "450",
+    "editor.fontSize": 15.2,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic bold"
+                }
+            }
+        ]
+    },
+    "terminal.integrated.fontFamily": "GeistMono Nerd Font Mono",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.tabs.enabled": false,
+    "terminal.integrated.fontWeight": "500",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.quickSuggestionsDelay": 0,
+    "extensions.ignoreRecommendations": true,
+    "git.autofetch": true,
+    "diffEditor.codeLens": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "python.analysis.typeCheckingMode": "strict",
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "autoDocstring.docstringFormat": "google",
+}
